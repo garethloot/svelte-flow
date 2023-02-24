@@ -74,7 +74,7 @@ function at() {
     throw new Error("Function called outside component initialization");
   return j;
 }
-const $ = [], H = [], O = [], J = [], ft = Promise.resolve();
+const w = [], H = [], O = [], J = [], ft = Promise.resolve();
 let T = !1;
 function dt() {
   T || (T = !0, ft.then(F));
@@ -83,28 +83,28 @@ function z(e) {
   O.push(e);
 }
 const B = /* @__PURE__ */ new Set();
-let w = 0;
+let $ = 0;
 function F() {
-  if (w !== 0)
+  if ($ !== 0)
     return;
   const e = j;
   do {
     try {
-      for (; w < $.length; ) {
-        const t = $[w];
-        w++, b(t), ht(t.$$);
+      for (; $ < w.length; ) {
+        const t = w[$];
+        $++, b(t), ht(t.$$);
       }
     } catch (t) {
-      throw $.length = 0, w = 0, t;
+      throw w.length = 0, $ = 0, t;
     }
-    for (b(null), $.length = 0, w = 0; H.length; )
+    for (b(null), w.length = 0, $ = 0; H.length; )
       H.pop()();
     for (let t = 0; t < O.length; t += 1) {
       const n = O[t];
       B.has(n) || (B.add(n), n());
     }
     O.length = 0;
-  } while ($.length);
+  } while (w.length);
   for (; J.length; )
     J.pop()();
   T = !1, B.clear(), b(e);
@@ -184,12 +184,12 @@ function yt(e, t, n, c) {
     e.$$.on_destroy ? e.$$.on_destroy.push(...r) : C(r), e.$$.on_mount = [];
   }), o.forEach(z);
 }
-function wt(e, t) {
+function $t(e, t) {
   const n = e.$$;
   n.fragment !== null && (C(n.on_destroy), n.fragment && n.fragment.d(t), n.on_destroy = n.fragment = null, n.ctx = []);
 }
-function $t(e, t) {
-  e.$$.dirty[0] === -1 && ($.push(e), dt(), e.$$.dirty.fill(0)), e.$$.dirty[t / 31 | 0] |= 1 << t % 31;
+function wt(e, t) {
+  e.$$.dirty[0] === -1 && (w.push(e), dt(), e.$$.dirty.fill(0)), e.$$.dirty[t / 31 | 0] |= 1 << t % 31;
 }
 function X(e, t, n, c, l, o, r, f = [-1]) {
   const u = j;
@@ -219,7 +219,7 @@ function X(e, t, n, c, l, o, r, f = [-1]) {
   let p = !1;
   if (s.ctx = n ? n(e, t.props || {}, (h, m, ...x) => {
     const g = x.length ? x[0] : m;
-    return s.ctx && l(s.ctx[h], s.ctx[h] = g) && (!s.skip_bound && s.bound[h] && s.bound[h](g), p && $t(e, h)), m;
+    return s.ctx && l(s.ctx[h], s.ctx[h] = g) && (!s.skip_bound && s.bound[h] && s.bound[h](g), p && wt(e, h)), m;
   }) : [], s.update(), p = !0, C(s.before_update), s.fragment = c ? c(s.ctx) : !1, t.target) {
     if (t.hydrate) {
       const h = st(t.target);
@@ -232,7 +232,7 @@ function X(e, t, n, c, l, o, r, f = [-1]) {
 }
 class Y {
   $destroy() {
-    wt(this, 1), this.$destroy = _;
+    $t(this, 1), this.$destroy = _;
   }
   $on(t, n) {
     if (!U(n))
@@ -377,7 +377,7 @@ function Pt(e) {
       t = d("button"), n = k("count is "), c = k(
         /*count*/
         e[0]
-      ), i(t, "class", "button cc-white-button w-inline-block");
+      ), i(t, "class", "w-button");
     },
     m(r, f) {
       P(r, t, f), a(t, n), a(t, c), l || (o = ot(

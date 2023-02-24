@@ -5,6 +5,6 @@
   }
 </script>
 
-<button class="button cc-white-button w-inline-block" on:click={increment}>
+<button class="w-button" on:click={increment}>
   count is {count}
 </button>

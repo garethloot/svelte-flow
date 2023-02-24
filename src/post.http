@@ -1,0 +1,13 @@
+POST https://api.webflow.com/collections/63f8c4c9205e4c6d56d4236d/items
+Content-Type: application/json
+Authorization: Bearer e0bcac4fb16155a27f64d5aff46693a428f2f0838150cd7a32fe50cb5fe399a2
+
+{
+  "fields": {
+    "name": "Test",
+    "title": "Test",
+    "slug": "test",
+    "_archived": false,
+    "_draft": false
+  }
+}
