@@ -1,15 +1,15 @@
 import Products from './lib/Products.svelte'
 import Counter from './lib/Counter.svelte'
 
-const Components = {
-  Products,
-  Counter,
+type TProps = {
+  [key: string]: any
 }
 
-const createComponent = (component: any, target: string) => {
+const createComponent = (component: any, target: string, props: TProps) => {
   new component({
     target: document.getElementById(target),
+    props: props,
   })
 }
 
-export { Components, createComponent }
+export { Products, Counter, createComponent }
