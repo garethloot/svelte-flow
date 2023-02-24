@@ -1,12 +1,10 @@
 <script lang="ts">
   export let count: number = 0
   const increment = () => {
-    count = Number(count) + 1
+    count += 1
   }
 </script>
 
-<svelte:options tag="my-counter" />
-
-<button on:click={increment}>
+<button class="button cc-white-button w-inline-block" on:click={increment}>
   count is {count}
 </button>
