@@ -8,6 +8,7 @@ export default defineConfig({
       entry: ['./src/main.ts'],
       formats: ['umd'],
       name: 'SvelteFlow',
+      fileName: 'svelte-flow',
     },
   },
   plugins: [svelte()],
