@@ -1,7 +1,4 @@
 import Products from './lib/Products.svelte'
+import Counter from './lib/Counter.svelte'
 
-const app = new Products({
-  target: document.getElementById('app'),
-})
-
-export default app
+export { Products, Counter }

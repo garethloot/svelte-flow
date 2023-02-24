@@ -5,8 +5,8 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 export default defineConfig({
   build: {
     lib: {
-      entry: ['./src/lib/Products.svelte', './src/lib/Counter.svelte'],
-      formats: ['es'],
+      entry: ['./src/main.ts'],
+      formats: ['umd'],
       name: 'SvelteFlow',
     },
   },
