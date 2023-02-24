@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: ['./src/main.ts'],
-      formats: ['umd'],
+      formats: ['umd', 'es'],
       name: 'SvelteFlow',
       fileName: 'svelte-flow',
     },
