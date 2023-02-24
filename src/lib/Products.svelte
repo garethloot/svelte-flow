@@ -1,5 +1,4 @@
 <script lang="ts">
-  import PostItem from './PostItem.svelte'
   const fetchProducts = async () => {
     const response = await fetch('https://dummyjson.com/products')
     const json = await response.json()
@@ -20,7 +19,24 @@
         class="posts-collection-list w-dyn-items w-row"
       >
         {#each result.products as { title, thumbnail, brand }}
-          <PostItem {title} image={thumbnail} {brand} />
+          <div
+            role="listitem"
+            class="_3-collection-item w-dyn-item w-col w-col-4"
+          >
+            <a href="#" class="posts-image w-inline-block"
+              ><img src={thumbnail} alt="" /></a
+            >
+            <div class="post-info-text">
+              <a href="#" class="category-link" />
+              <a href="#" class="post-title w-inline-block">
+                <h3 class="h3">{title}</h3>
+              </a>
+              <div class="post-author-text cc-small-thumbnail">
+                <div class="post-author cc-top-margin">{brand}</div>
+                <a href="#" class="post-author" />
+              </div>
+            </div>
+          </div>
         {/each}
       </div>
     </div>
