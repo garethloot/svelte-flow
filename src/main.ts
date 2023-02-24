@@ -12,4 +12,9 @@ const createComponent = (component: any, target: string, props: TProps) => {
   })
 }
 
-export { Products, Counter, createComponent }
+const Components = {
+  Products,
+  Counter,
+}
+
+export { Components, createComponent }
