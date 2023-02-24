@@ -11,7 +11,9 @@
 {#await response}
   <div>Loading...</div>
 {:then result}
-  {#each result.products as { title, thumbnail, brand }}
-    <PostItem {title} image={thumbnail} {brand} />
-  {/each}
+  <div role="listitem" class="_3-collection-item w-dyn-item w-col w-col-4">
+    {#each result.products as { title, thumbnail, brand }}
+      <PostItem {title} image={thumbnail} {brand} />
+    {/each}
+  </div>
 {/await}
